@@ -39,8 +39,6 @@ public class tableViewer extends AppCompatActivity {
         });
 
 
-
-
         returnButton = (Button)findViewById(R.id.returnHome);
 
         returnButton.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +50,7 @@ public class tableViewer extends AppCompatActivity {
         });
 
     }
+
     //This function returns the details of the table text file
     public String returnTableArray(){
 
@@ -95,11 +94,7 @@ public class tableViewer extends AppCompatActivity {
         for(int i = 0; i < 16; i++){
             listOfTables[i] = new Table(tabNumbers[i], tabReserved[i]);
         }
-
-
-
         return listOfTables;
-
     }
 
 
