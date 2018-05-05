@@ -21,7 +21,7 @@ public class displayMenu extends AppCompatActivity {
     double totalPrice;
 
     Button mainMenuButton;
-    Button chickenBurgerButton, Soft_Drink, Chicken_Burger, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries;
+    Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries;
     TextView totalTrollyPrice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +45,18 @@ public class displayMenu extends AppCompatActivity {
 
         names.setAdapter(trollyList);
 
+
+
         mainMenuButton = (Button)findViewById(R.id.endButton);
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);
+        Soft_Drink  = (Button)findViewById(R.id.SoftDrinkButton);
+        Beef_Burger = (Button)findViewById(R.id.BeefBurgerButton);
+        Steak = (Button)findViewById(R.id.SteakButton);
+        Chicken_Nuggets = (Button)findViewById(R.id.ChickenNuggetsButton);
+        Fish_and_Chips = (Button)findViewById(R.id.FishChipsButton);
+        Fries = (Button)findViewById(R.id.friesButton);
+
+
         totalTrollyPrice = (TextView)findViewById(R.id.totalTrollyPrice);
 
         mainMenuButton.setOnClickListener(new View.OnClickListener(){
@@ -57,6 +67,21 @@ public class displayMenu extends AppCompatActivity {
             }
         });
 
+
+        Soft_Drink.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[0].name);
+                trolly_price.add(Double.toString(listOfItems[0].price));
+
+                orderTrolly.add(listOfItems[0]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
         chickenBurgerButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -64,6 +89,76 @@ public class displayMenu extends AppCompatActivity {
                 trolly_price.add(Double.toString(listOfItems[1].price));
 
                 orderTrolly.add(listOfItems[1]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
+        Beef_Burger.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[2].name);
+                trolly_price.add(Double.toString(listOfItems[2].price));
+
+                orderTrolly.add(listOfItems[2]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
+        Steak.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[3].name);
+                trolly_price.add(Double.toString(listOfItems[3].price));
+
+                orderTrolly.add(listOfItems[3]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
+        Chicken_Nuggets.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[4].name);
+                trolly_price.add(Double.toString(listOfItems[4].price));
+
+                orderTrolly.add(listOfItems[4]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
+        Fish_and_Chips.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[5].name);
+                trolly_price.add(Double.toString(listOfItems[5].price));
+
+                orderTrolly.add(listOfItems[5]);
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
+        Fries.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                trolly.add(listOfItems[6].name);
+                trolly_price.add(Double.toString(listOfItems[6].price));
+
+                orderTrolly.add(listOfItems[6]);
                 trollyList.notifyDataSetChanged();
                 setPrice(orderTrolly);
 
@@ -83,7 +178,7 @@ public class displayMenu extends AppCompatActivity {
 
         }
 
-        totalTrollyPrice.setText(String.valueOf(totalPrice));
+        totalTrollyPrice.setText("$" + String.valueOf(totalPrice));
 
 
     }
