@@ -3,15 +3,18 @@ package planner.venue.venue;
 public class Item {
 
     int ID;
-    String description;
     double price;
     String name;
 
-     Item(String name, String description, double price){
+    Item(int ID, String name, double price){
         this.name = name;
-        this.description = description;
+        this.ID = ID;
         this.price = price;
 
+    }
+
+    public double getPrice(){
+        return price;
     }
 
 }

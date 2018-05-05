@@ -28,23 +28,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/darkblue" />
 
-    <Button
-        android:id="@+id/viewTables"
-        android:layout_width="0dp"
-        android:layout_height="89dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="148dp"
-        android:minHeight="70dp"
-        android:minWidth="250dp"
-        android:text="VIEW TABLES"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="182dp"
@@ -68,6 +51,14 @@
             android:text="Menu" />
 
         <Button
+            android:id="@+id/viewTables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Tables"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="197dp" />
+
+        <Button
             android:id="@+id/reservationsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,7 +72,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="176dp" />
+            android:layout_height="140dp" />
 
         <Button
             android:id="@+id/personalButton"
@@ -95,7 +86,6 @@
             android:layout_height="wrap_content"
             android:text="End" />
     </LinearLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
