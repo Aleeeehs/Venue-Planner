@@ -12,7 +12,7 @@ import java.io.InputStream;
 
 public class mainMenu extends AppCompatActivity {
 
-    Button tableView;
+    Button tableView, menuView;
     Button adminButton;
     TextView t1;
 
@@ -24,6 +24,8 @@ public class mainMenu extends AppCompatActivity {
 
         tableView = (Button)findViewById(R.id.viewTables);
         adminButton = (Button)findViewById(R.id.adminMenuButton);
+        menuView = (Button)findViewById(R.id.menuButton);
+
 
         tableView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +43,17 @@ public class mainMenu extends AppCompatActivity {
             }
         });
 
+        menuView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mainMenu.this, displayMenu.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 
 
 }

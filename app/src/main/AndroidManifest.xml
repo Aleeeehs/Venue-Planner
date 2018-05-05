@@ -27,6 +27,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".displayMenu" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".tablePopUp" android:theme ="@style/AppTheme.popUpTheme" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
