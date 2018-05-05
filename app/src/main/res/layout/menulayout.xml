@@ -91,17 +91,17 @@
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="12dp"
         android:text="Order Now"
         tools:layout_editor_absoluteX="858dp"
         tools:layout_editor_absoluteY="363dp" />
 
     <ListView
         android:id="@+id/ItemsInTrolly"
-        android:layout_width="159dp"
-        android:layout_height="359dp"
+        android:layout_width="162dp"
+        android:layout_height="338dp"
+        android:layout_above="@+id/totalTrollyPrice"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
         android:background="@android:color/darker_gray"
         tools:layout_editor_absoluteX="762dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -119,6 +119,94 @@
         tools:layout_editor_absoluteX="874dp"
         tools:layout_editor_absoluteY="342dp"
         tools:text="$00.00" />
+
+    <Button
+        android:id="@+id/BeefBurgerButton"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/chickenBurgerButton"
+        android:layout_marginTop="136dp"
+        android:text="BEEF BURGER" />
+
+    <TextView
+        android:id="@+id/DrinksTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/BurgersTag"
+        android:layout_marginBottom="137dp"
+        android:text="Drinks" />
+
+    <Button
+        android:id="@+id/SoftDrinkButton"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/OrderButton"
+        android:layout_alignStart="@+id/chickenBurgerButton"
+        android:text="Soft Drink" />
+
+    <TextView
+        android:id="@+id/MeatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/BurgersTag"
+        android:layout_marginStart="393dp"
+        android:text="The Meat" />
+
+    <Button
+        android:id="@+id/SteakButton"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/chickenBurgerButton"
+        android:layout_marginStart="380dp"
+        android:text="Steak" />
+
+    <Button
+        android:id="@+id/ChickenNuggetsButton"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SteakButton"
+        android:layout_alignTop="@+id/BeefBurgerButton"
+        android:text="Chicken Nuggets" />
+
+    <Button
+        android:id="@+id/FishChipsButton"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/SteakButton"
+        android:layout_marginBottom="192dp"
+        android:text="Fish and Chips" />
+
+    <TextView
+        android:id="@+id/SidesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/BurgersTag"
+        android:layout_marginEnd="333dp"
+        android:text="Sides" />
+
+    <Button
+        android:id="@+id/friesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/chickenBurgerButton"
+        android:layout_marginEnd="309dp"
+        android:text="Fries" />
+
+    <Button
+        android:id="@+id/RestartOrderButton"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_red_dark"
+        android:text="Restart Order" />
 
 
 </RelativeLayout>
