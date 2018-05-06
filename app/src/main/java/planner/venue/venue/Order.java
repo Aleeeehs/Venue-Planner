@@ -1,12 +1,12 @@
 package planner.venue.venue;
 
 public class Order {
-    int OrderNumber;
-    int tableNumber;
-    Item[] selectedItems;
 
-    Order(int tableNumber, Item[] selectedItems){
-        this.tableNumber = tableNumber;
+    int price;
+    String[] selectedItems;
+
+    Order(String[] selectedItems, int price){
+        this.price = price;
         this.selectedItems = selectedItems;
     }
 
