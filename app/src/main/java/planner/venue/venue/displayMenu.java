@@ -10,9 +10,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class displayMenu extends AppCompatActivity {
@@ -20,7 +26,8 @@ public class displayMenu extends AppCompatActivity {
     final int menu_size = 7;
     double totalPrice;
 
-    Button mainMenuButton, restartOrderButton;
+
+    Button mainMenuButton, restartOrderButton, payCashButton;
     Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries;
     TextView totalTrollyPrice;
     @Override
@@ -45,6 +52,7 @@ public class displayMenu extends AppCompatActivity {
 
         mainMenuButton = (Button)findViewById(R.id.endButton);
         restartOrderButton = (Button)findViewById(R.id.RestartOrderButton);
+        payCashButton = (Button)findViewById(R.id.PayCashButton);
 
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);
         Soft_Drink  = (Button)findViewById(R.id.SoftDrinkButton);
@@ -169,10 +177,30 @@ public class displayMenu extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 orderTrolly.clear();
+                trolly_price.clear();
                 trollyList.clear();
                 trollyList.notifyDataSetChanged();
                 setPrice(orderTrolly);
 
+
+            }
+        });
+
+        payCashButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                try {
+                    addToInvoices(trolly);
+                    orderTrolly.clear();
+                    trolly_price.clear();
+                    trollyList.clear();
+                    trollyList.notifyDataSetChanged();
+                    setPrice(orderTrolly);
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -198,7 +226,7 @@ public class displayMenu extends AppCompatActivity {
     public String returnMenuString(){
 
 
-        InputStream input;
+
         String text = "";
         try {
             InputStream is = getAssets().open("menu.txt");
@@ -247,5 +275,12 @@ public class displayMenu extends AppCompatActivity {
 
 
         return listOfItems;
+    }
+
+    public void addToInvoices(ArrayList<String> trolly) throws IOException {
+        //TODO
+
+
+
     }
 }

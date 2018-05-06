@@ -86,13 +86,13 @@
         app:layout_constraintTop_toBottomOf="@+id/BurgersTag" />
 
     <Button
-        android:id="@+id/OrderButton"
+        android:id="@+id/PayCashButton"
         android:layout_width="105dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="12dp"
-        android:text="Order Now"
+        android:text="Pay Cash"
         tools:layout_editor_absoluteX="858dp"
         tools:layout_editor_absoluteY="363dp" />
 
@@ -108,11 +108,11 @@
 
     <TextView
         android:id="@+id/totalTrollyPrice"
-        android:layout_width="98dp"
+        android:layout_width="103dp"
 
         android:layout_height="22dp"
 
-        android:layout_above="@+id/OrderButton"
+        android:layout_above="@+id/PayCashButton"
         android:layout_alignParentEnd="true"
         android:background="@android:color/darker_gray"
         android:text="$00.00"
@@ -142,7 +142,7 @@
         android:id="@+id/SoftDrinkButton"
         android:layout_width="84dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/OrderButton"
+        android:layout_above="@+id/PayCashButton"
         android:layout_alignStart="@+id/chickenBurgerButton"
         android:text="Soft Drink" />
 
