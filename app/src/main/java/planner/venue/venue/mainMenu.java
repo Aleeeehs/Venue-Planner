@@ -12,8 +12,8 @@ import java.io.InputStream;
 
 public class mainMenu extends AppCompatActivity {
 
-    Button tableView, menuView;
-    Button adminButton;
+    Button tableView, menuView, adminView, personalView;
+
     TextView t1;
 
     @Override
@@ -23,9 +23,9 @@ public class mainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         tableView = (Button)findViewById(R.id.viewTables);
-        adminButton = (Button)findViewById(R.id.adminMenuButton);
+        adminView = (Button)findViewById(R.id.adminMenuButton);
         menuView = (Button)findViewById(R.id.menuButton);
-
+        personalView = (Button)findViewById(R.id.personalButton);
 
         tableView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class mainMenu extends AppCompatActivity {
             }
         });
 
-        adminButton.setOnClickListener(new View.OnClickListener() {
+        adminView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mainMenu.this, administrationMenu.class);
@@ -51,9 +51,13 @@ public class mainMenu extends AppCompatActivity {
             }
         });
 
+        personalView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mainMenu.this, personalizationMenu.class);
+                startActivity(intent);
+            }
+        });
+
     }
-
-
-
-
 }

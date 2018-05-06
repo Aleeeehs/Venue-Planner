@@ -41,11 +41,7 @@ public class displayMenu extends AppCompatActivity {
         ListView names = findViewById(R.id.ItemsInTrolly);
         final CustomListAdapter trollyList = new CustomListAdapter(this, trolly, trolly_price);
 
-
-
         names.setAdapter(trollyList);
-
-
 
         mainMenuButton = (Button)findViewById(R.id.endButton);
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);

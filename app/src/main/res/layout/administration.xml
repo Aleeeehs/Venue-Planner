@@ -6,14 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="288dp"
-        android:layout_height="126dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="56dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="182dp"
+        android:layout_height="467dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:layout_editor_absoluteX="2dp">
+
+        <Button
+            android:id="@+id/rosterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roster" />
+
+        <Button
+            android:id="@+id/editTablesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Tables" />
+
+        <Button
+            android:id="@+id/transactionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transactions" />
+
+        <Button
+            android:id="@+id/createStaffButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Staff" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="222dp" />
+
+        <Button
+            android:id="@+id/returnButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Back" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
