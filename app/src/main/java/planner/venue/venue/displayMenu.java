@@ -20,7 +20,7 @@ public class displayMenu extends AppCompatActivity {
     final int menu_size = 7;
     double totalPrice;
 
-    Button mainMenuButton;
+    Button mainMenuButton, restartOrderButton;
     Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries;
     TextView totalTrollyPrice;
     @Override
@@ -44,6 +44,8 @@ public class displayMenu extends AppCompatActivity {
         names.setAdapter(trollyList);
 
         mainMenuButton = (Button)findViewById(R.id.endButton);
+        restartOrderButton = (Button)findViewById(R.id.RestartOrderButton);
+
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);
         Soft_Drink  = (Button)findViewById(R.id.SoftDrinkButton);
         Beef_Burger = (Button)findViewById(R.id.BeefBurgerButton);
@@ -62,6 +64,7 @@ public class displayMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
         Soft_Drink.setOnClickListener(new View.OnClickListener(){
@@ -161,6 +164,19 @@ public class displayMenu extends AppCompatActivity {
 
             }
         });
+
+        restartOrderButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                orderTrolly.clear();
+                trollyList.clear();
+                trollyList.notifyDataSetChanged();
+                setPrice(orderTrolly);
+
+
+            }
+        });
+
 
 
 
