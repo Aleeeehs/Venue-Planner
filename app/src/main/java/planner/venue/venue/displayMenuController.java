@@ -23,8 +23,10 @@ public class displayMenuController {
         listOfItems = createItemArray(menuString);
 
 
-
+        System.out.println("Check Check");
     }
+
+
 
     public ArrayList<String> returnTrolly(){
         return trolly;
