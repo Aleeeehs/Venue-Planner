@@ -21,9 +21,9 @@ public class displayMenuController {
         String StringRawInfo = rawMenuInfo;
         String menuString[] = StringRawInfo.split("\\s+");
         listOfItems = createItemArray(menuString);
+        System.out.println("test again");
 
 
-        System.out.println("Check Check");
     }
 
 
