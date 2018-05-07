@@ -62,6 +62,7 @@ public class displayMenuController {
 
     public double restartOrder(){
         orderTrolly.clear();
+        trolly.clear();
         trolly_price.clear();
         return 0;
     }
