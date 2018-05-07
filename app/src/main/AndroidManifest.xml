@@ -42,7 +42,8 @@
             </intent-filter>
         </activity>
 
-
+        <activity android:name=".addStaffMenu"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".administrationMenu"
             android:screenOrientation="landscape" />
