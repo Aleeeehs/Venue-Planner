@@ -11,7 +11,7 @@ public class personalizationMenu extends AppCompatActivity{
 
     ImageView profilePhoto;
     private Chronometer timeSinceClockIn;
-    private long zero = 0;
+    private boolean running;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,11 @@ public class personalizationMenu extends AppCompatActivity{
 
     private void startTime()
     {
-        if(zero == 0)
+        if(!running)
         {
             timeSinceClockIn.setBase(SystemClock.elapsedRealtime());
             timeSinceClockIn.start();
-            zero +=1;
+            running = true;
         }
         else
         {
