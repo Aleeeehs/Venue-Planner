@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".mainMenu" android:screenOrientation="landscape">
+        <activity
+            android:name=".mainMenu"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tableViewer" android:screenOrientation="landscape">
+        <activity
+            android:name=".tableViewer"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +30,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".displayMenu" android:screenOrientation="landscape">
+        <activity
+            android:name=".displayMenu"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +40,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tablePopUp" android:theme ="@style/AppTheme.popUpTheme" android:screenOrientation="landscape">
+        <activity
+            android:name=".tablePopUp"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.popUpTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,7 +51,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".addStaffMenu"
+        <activity
+            android:name=".addStaffMenu"
             android:screenOrientation="landscape" />
         <activity
             android:name=".administrationMenu"
@@ -51,9 +61,14 @@
             android:name=".personalizationMenu"
             android:screenOrientation="landscape" />
 
+        <service
+            android:name=".ServiceChronometer"
+            android:exported="false"
+            ></service>
+
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android:permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android:permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
