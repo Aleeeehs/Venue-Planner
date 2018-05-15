@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".mainMenu"
+            android:name=".Login"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,11 +59,8 @@
             android:name=".personalizationMenu"
             android:screenOrientation="landscape" />
 
-        <service
-            android:name=".ServiceChronometer"
-            android:exported="false" />
 
-        <activity android:name=".Login" />
+        <activity android:name=".mainMenu" />
         <activity android:name=".Register"></activity>
     </application>
 
