@@ -1,6 +1,8 @@
 package planner.venue.venue;
 
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
+import android.preference.PreferenceManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class displayMenuController {
     final ArrayList<String> trolly_price = new ArrayList<String>();
     final ArrayList<Item> orderTrolly = new ArrayList<Item>();
     final Item[] listOfItems;
+
+
 
     public displayMenuController(String rawMenuInfo){
         totalPrice = 0;
@@ -41,7 +45,7 @@ public class displayMenuController {
 
     public double itemButtonPress(int menuSpot){
         trolly.add(listOfItems[menuSpot].name);
-        trolly_price.add(Double.toString(listOfItems[menuSpot].price));
+        trolly_price.add("$" + (Double.toString(listOfItems[menuSpot].price))+"0");
 
         orderTrolly.add(listOfItems[menuSpot]);
         return setPrice();

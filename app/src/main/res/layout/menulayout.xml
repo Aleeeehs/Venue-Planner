@@ -92,18 +92,18 @@
 
     <Button
         android:id="@+id/PayCashButton"
-        android:layout_width="177dp"
+        android:layout_width="183dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="25dp"
         android:text="Pay Cash"
         tools:layout_editor_absoluteX="858dp"
         tools:layout_editor_absoluteY="363dp" />
 
     <ListView
         android:id="@+id/ItemsInTrolly"
-        android:layout_width="177dp"
+        android:layout_width="183dp"
         android:layout_height="338dp"
         android:layout_above="@+id/totalTrollyPrice"
         android:layout_alignParentEnd="true"
@@ -113,7 +113,7 @@
 
     <TextView
         android:id="@+id/totalTrollyPrice"
-        android:layout_width="177dp"
+        android:layout_width="183dp"
 
         android:layout_height="22dp"
 

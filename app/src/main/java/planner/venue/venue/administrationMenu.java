@@ -10,7 +10,7 @@ import android.widget.Button;
 public class administrationMenu extends AppCompatActivity{
 
     Button returnButton;
-    Button createStaffButton;
+    Button createStaffButton, AnalyticsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class administrationMenu extends AppCompatActivity{
 
         returnButton = (Button)findViewById(R.id.returnButton);
         createStaffButton  = (Button)findViewById(R.id.createStaffButton);
-
+        AnalyticsButton = findViewById(R.id.AnalyticsButton);
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,5 +35,15 @@ public class administrationMenu extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        AnalyticsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(administrationMenu.this, analysisIncome.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

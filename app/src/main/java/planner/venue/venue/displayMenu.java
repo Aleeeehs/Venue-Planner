@@ -1,6 +1,10 @@
 package planner.venue.venue;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +28,8 @@ public class displayMenu extends AppCompatActivity {
     Button mainMenuButton, restartOrderButton, payCashButton, tableView;
     Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries, taxiButton;
     TextView totalTrollyPrice;
+    private SharedPreferences nPreferences;
+    private SharedPreferences.Editor nEditor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +92,7 @@ public class displayMenu extends AppCompatActivity {
 
                m1.itemButtonPress(0);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+ "0");
 
 
             }
@@ -110,7 +116,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(1);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()) +"0");
 
 
             }
@@ -133,7 +139,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(2);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -156,7 +162,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(3);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -179,7 +185,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(4);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -202,7 +208,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(5);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -225,7 +231,7 @@ public class displayMenu extends AppCompatActivity {
 
                 m1.itemButtonPress(6);
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -249,7 +255,7 @@ public class displayMenu extends AppCompatActivity {
                 m1.restartOrder();
                 trollyList.clear();
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
 
             }
@@ -258,10 +264,13 @@ public class displayMenu extends AppCompatActivity {
         payCashButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                if(m1.totalPrice != 0) {
+                    saveToPreference(m1.totalPrice);
+                }
                 m1.restartOrder();
                 trollyList.clear();
                 trollyList.notifyDataSetChanged();
-                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()));
+                totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice())+"0");
 
             }
         });
@@ -274,6 +283,28 @@ public class displayMenu extends AppCompatActivity {
 
 
 
+    public void saveToPreference(double price){
+        nPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        nEditor = nPreferences.edit();
+        if(!nPreferences.contains("totalCash")){
+            nEditor.putInt("totalCash", 0);
+            nEditor.commit();
+        }
+        int Cash = (int)(price);
+        Cash = Cash + (nPreferences.getInt("totalCash",0));
+        nEditor.putInt("totalCash", Cash);
+        nEditor.commit();
+
+        if(!nPreferences.contains("totalOrders")){
+            nEditor.putInt("totalOrders", 0);
+            nEditor.commit();
+        }
+        int orders = 1;
+        orders = orders + (nPreferences.getInt("totalOrders",0));
+        nEditor.putInt("totalOrders", orders);
+        nEditor.commit();
+
+    }
     public String returnMenuString(){
 
 

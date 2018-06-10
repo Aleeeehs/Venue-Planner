@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainMenu"
+    tools:layout_editor_absoluteY="89dp">
+
+    <LinearLayout
+        android:layout_width="182dp"
+        android:layout_height="467dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/rosterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roster" />
+
+        <Button
+            android:id="@+id/AnalyticsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:text="Analysis Income" />
+
+        <Button
+            android:id="@+id/transactionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transactions" />
+
+        <Button
+            android:id="@+id/createStaffButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Staff" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="222dp" />
+
+        <Button
+            android:id="@+id/returnButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Back" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TotalOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="59dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/totalSales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/TotalOrders"
+        android:layout_marginTop="131dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/AverageSale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/TotalOrders"
+        android:layout_marginTop="211dp"
+        android:text="TextView" />
+
+</RelativeLayout>

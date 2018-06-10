@@ -18,6 +18,10 @@
             android:screenOrientation="landscape">
         </activity>
         <activity
+            android:name=".analysisIncome"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name=".callTaxiMenu"
             android:screenOrientation="landscape">
         </activity>
