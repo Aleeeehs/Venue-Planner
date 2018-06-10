@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android:permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +15,10 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Login"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".callTaxiMenu"
             android:screenOrientation="landscape">
         </activity>
         <activity

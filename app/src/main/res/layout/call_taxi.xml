@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainMenu"
+    tools:layout_editor_absoluteY="89dp">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="182dp"
+        android:layout_height="467dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/adminMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/viewTables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Tables" />
+
+        <Button
+            android:id="@+id/reservationsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reservations" />
+
+        <Button
+            android:id="@+id/taxiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Taxi" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="126dp" />
+
+        <Button
+            android:id="@+id/personalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal" />
+
+        <Button
+            android:id="@+id/endButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="599dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/callbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/taxi" />
+
+    <Button
+        android:id="@+id/callbutton"
+        android:layout_width="235dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="468dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="468dp"
+        android:text="Call Taxi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
