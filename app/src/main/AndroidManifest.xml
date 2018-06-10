@@ -28,7 +28,6 @@
         </activity>
         <activity
             android:name=".tablePopUp"
-            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.popUpTheme">
 
         </activity>

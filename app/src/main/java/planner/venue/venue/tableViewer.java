@@ -15,7 +15,7 @@ import java.io.InputStream;
 public class tableViewer extends AppCompatActivity {
 
     Button returnButton;
-    ImageButton t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16;
+    Button t1, t2, t3, t4, t5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class tableViewer extends AppCompatActivity {
         String tableString[] = TableRawInfo.split("\\r?\\n");
         Table[] tableArray = createTableArray(tableString);
 
-        t1 = (ImageButton)findViewById(R.id.t1);
+        t1 = (Button)findViewById(R.id.t1);
         final Table sentTable = tableArray[0];
         t1.setOnClickListener(new View.OnClickListener() {
             @Override

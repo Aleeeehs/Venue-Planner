@@ -15,7 +15,7 @@ import java.io.InputStream;
 public class tablePopUp extends AppCompatActivity{
 
     Table table;
-    TextView tableName;
+    TextView tableName, ReservedStatus;
 
     @Override
 
@@ -29,12 +29,22 @@ public class tablePopUp extends AppCompatActivity{
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width * 0.7), (int)(height * 0.7));
+        getWindow().setLayout((int)(width * 0.9), (int)(height * 0.9));
+
+        tableName = findViewById(R.id.tableName);
+        ReservedStatus = findViewById(R.id.ReservedTable);
 
         String tableNumber = getIntent().getExtras().getString("Table Number");
+        String reserved = getIntent().getExtras().getString("Table Avaliable");
+        boolean reserve = Boolean.parseBoolean(reserved);
+        System.out.println(reserve);
 
 
-        tableName = (TextView)findViewById(R.id.tableName);
+        ReservedStatus.setText("This table is free");
+
+
+
+
         tableName.setText("This is Table " + tableNumber);
 
     }
