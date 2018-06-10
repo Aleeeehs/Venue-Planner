@@ -21,8 +21,8 @@ public class displayMenu extends AppCompatActivity {
     double totalPrice;
     displayMenuController m1;
 
-    Button mainMenuButton, restartOrderButton, payCashButton;
-    Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries;
+    Button mainMenuButton, restartOrderButton, payCashButton, tableView;
+    Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries, taxiButton;
     TextView totalTrollyPrice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,9 @@ public class displayMenu extends AppCompatActivity {
         mainMenuButton = (Button)findViewById(R.id.endButton);
         restartOrderButton = (Button)findViewById(R.id.RestartOrderButton);
         payCashButton = (Button)findViewById(R.id.PayCashButton);
+        taxiButton = (Button)findViewById(R.id.taxiButton);
+        tableView = (Button)findViewById(R.id.viewTables);
+
 
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);
         Soft_Drink  = (Button)findViewById(R.id.SoftDrinkButton);
@@ -55,6 +58,21 @@ public class displayMenu extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(displayMenu.this, mainMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        taxiButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(displayMenu.this, callTaxiMenu.class);
+                startActivity(intent);
+            }
+        });
+        tableView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(displayMenu.this, tableViewer.class);
                 startActivity(intent);
             }
         });

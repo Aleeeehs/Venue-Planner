@@ -92,18 +92,18 @@
 
     <Button
         android:id="@+id/PayCashButton"
-        android:layout_width="105dp"
+        android:layout_width="177dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="23dp"
         android:text="Pay Cash"
         tools:layout_editor_absoluteX="858dp"
         tools:layout_editor_absoluteY="363dp" />
 
     <ListView
         android:id="@+id/ItemsInTrolly"
-        android:layout_width="162dp"
+        android:layout_width="177dp"
         android:layout_height="338dp"
         android:layout_above="@+id/totalTrollyPrice"
         android:layout_alignParentEnd="true"
@@ -113,13 +113,14 @@
 
     <TextView
         android:id="@+id/totalTrollyPrice"
-        android:layout_width="103dp"
+        android:layout_width="177dp"
 
         android:layout_height="22dp"
 
         android:layout_above="@+id/PayCashButton"
         android:layout_alignParentEnd="true"
         android:background="@android:color/darker_gray"
+        android:gravity="right"
         android:text="$00.00"
         tools:layout_editor_absoluteX="874dp"
         tools:layout_editor_absoluteY="342dp"
@@ -207,7 +208,7 @@
     <Button
         android:id="@+id/RestartOrderButton"
         android:layout_width="113dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:background="@android:color/holo_red_dark"
@@ -221,6 +222,14 @@
         android:layout_alignTop="@+id/PayCashButton"
         android:layout_marginStart="360dp"
         android:text="Fish of the Day: Snapper" />
+
+    <TextView
+        android:id="@+id/hinttext"
+        android:layout_width="237dp"
+        android:layout_height="31dp"
+        android:layout_alignStart="@+id/fishoftheday"
+        android:layout_alignTop="@+id/SoftDrinkButton"
+        android:text="Hold down a button for info" />
 
 
 </RelativeLayout>
