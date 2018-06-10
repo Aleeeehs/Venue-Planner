@@ -16,6 +16,8 @@ public class tablePopUp extends AppCompatActivity{
 
     Table table;
     TextView tableName, ReservedStatus;
+    Button reserveButton, orderButton;
+    boolean reserve;
 
     @Override
 
@@ -33,19 +35,47 @@ public class tablePopUp extends AppCompatActivity{
 
         tableName = findViewById(R.id.tableName);
         ReservedStatus = findViewById(R.id.ReservedTable);
+        reserveButton = findViewById(R.id.ReserveButton);
+        orderButton = findViewById(R.id.OrderToTable);
 
         String tableNumber = getIntent().getExtras().getString("Table Number");
         String reserved = getIntent().getExtras().getString("Table Avaliable");
-        boolean reserve = Boolean.parseBoolean(reserved);
-        System.out.println(reserve);
+        reserve = Boolean.parseBoolean(reserved);
+
+        if(reserve) {
+            ReservedStatus.setText("This table is reserved");
+
+        }else{
+            ReservedStatus.setText("This table is free");
+        }
 
 
-        ReservedStatus.setText("This table is free");
+        reserveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(reserve){
+                    ReservedStatus.setText("This table is free");
+                    reserve = false;
+
+                }else{
+                    ReservedStatus.setText("This table is reserved");
+                    reserve = true;
+                }
+            }
+        });
+
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(tablePopUp.this, displayMenu.class);
+                startActivity(intent);
+
+            }
+        });
 
 
-
-
-        tableName.setText("This is Table " + tableNumber);
+        tableName.setText("Table " + tableNumber);
 
     }
 

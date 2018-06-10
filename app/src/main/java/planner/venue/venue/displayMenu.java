@@ -61,6 +61,8 @@ public class displayMenu extends AppCompatActivity {
 
 
 
+
+
         Soft_Drink.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -70,6 +72,19 @@ public class displayMenu extends AppCompatActivity {
 
 
             }
+        });
+
+
+        Soft_Drink.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Soft Drink");
+                intent.putExtra("description", "A carbonated drink\n Glutten Free: Yes\n Vegan: Yes");
+                startActivity(intent);
+                return false;
+            }
+
         });
 
         chickenBurgerButton.setOnClickListener(new View.OnClickListener(){
@@ -83,6 +98,18 @@ public class displayMenu extends AppCompatActivity {
             }
         });
 
+        chickenBurgerButton.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Chicken Burger");
+                intent.putExtra("description", "A burger containing: \n Chicken Patty\nCranberry Sauce\nCheese\nLettuce\n Glutten Free: No\n Vegan: No");
+                startActivity(intent);
+                return false;
+            }
+
+        });
+
         Beef_Burger.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -92,6 +119,18 @@ public class displayMenu extends AppCompatActivity {
 
 
             }
+        });
+
+        Beef_Burger.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Beef Burger");
+                intent.putExtra("description", "A burger containing: \n Beef Patty\nBBQ Sauce\nCheese\nLettuce\n Glutten Free: No\n Vegan: No");
+                startActivity(intent);
+                return false;
+            }
+
         });
 
         Steak.setOnClickListener(new View.OnClickListener(){
@@ -105,6 +144,18 @@ public class displayMenu extends AppCompatActivity {
             }
         });
 
+        Steak.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Steak");
+                intent.putExtra("description", "A steak with mushroom sauce \n Glutten Free: No\n Vegan: No");
+                startActivity(intent);
+                return false;
+            }
+
+        });
+
         Chicken_Nuggets.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -114,6 +165,18 @@ public class displayMenu extends AppCompatActivity {
 
 
             }
+        });
+
+        Chicken_Nuggets.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Chicken Nuggets");
+                intent.putExtra("description", "10 chicken nuggets containg Sweet and Sour Sauce \n Glutten Free: No\n Vegan: No");
+                startActivity(intent);
+                return false;
+            }
+
         });
 
         Fish_and_Chips.setOnClickListener(new View.OnClickListener(){
@@ -127,6 +190,18 @@ public class displayMenu extends AppCompatActivity {
             }
         });
 
+        Fish_and_Chips.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Fish and Chips");
+                intent.putExtra("description", "Beer battered Fish with a side of fries \n Glutten Free: No\n Vegan: No");
+                startActivity(intent);
+                return false;
+            }
+
+        });
+
         Fries.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -136,6 +211,18 @@ public class displayMenu extends AppCompatActivity {
 
 
             }
+        });
+
+        Fries.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(displayMenu.this, menuPopUp.class);
+                intent.putExtra("Name", "Fries");
+                intent.putExtra("description", "A side of fries \n Glutten Free: Yes\n Vegan: Yes");
+                startActivity(intent);
+                return false;
+            }
+
         });
 
         restartOrderButton.setOnClickListener(new View.OnClickListener(){

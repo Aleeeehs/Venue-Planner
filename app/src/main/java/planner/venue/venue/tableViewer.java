@@ -16,6 +16,8 @@ public class tableViewer extends AppCompatActivity {
 
     Button returnButton;
     Button t1, t2, t3, t4, t5;
+    Table sentTable;
+    Table[] tableArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +26,66 @@ public class tableViewer extends AppCompatActivity {
 
         String TableRawInfo = returnTableArray();
         String tableString[] = TableRawInfo.split("\\r?\\n");
-        Table[] tableArray = createTableArray(tableString);
+        tableArray = createTableArray(tableString);
 
         t1 = (Button)findViewById(R.id.t1);
-        final Table sentTable = tableArray[0];
+        t2 = (Button)findViewById(R.id.t2);
+        t3 = (Button)findViewById(R.id.t3);
+        t4 = (Button)findViewById(R.id.t4);
+        t5 = (Button)findViewById(R.id.t5);
+
+
+
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sentTable = tableArray[0];
+                Intent intent = new Intent(tableViewer.this, tablePopUp.class);
+                intent.putExtra("Table Number", Integer.toString(sentTable.table_id));
+                intent.putExtra("Table Avaliable", Boolean.toString(sentTable.avaliable));
+                startActivity(intent);
+            }
+        });
+
+
+
+        t2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentTable = tableArray[1];
+                Intent intent = new Intent(tableViewer.this, tablePopUp.class);
+                intent.putExtra("Table Number", Integer.toString(sentTable.table_id));
+                intent.putExtra("Table Avaliable", Boolean.toString(sentTable.avaliable));
+                startActivity(intent);
+            }
+        });
+
+        t3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentTable = tableArray[2];
+                Intent intent = new Intent(tableViewer.this, tablePopUp.class);
+                intent.putExtra("Table Number", Integer.toString(sentTable.table_id));
+                intent.putExtra("Table Avaliable", Boolean.toString(sentTable.avaliable));
+                startActivity(intent);
+            }
+        });
+
+        t4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentTable = tableArray[3];
+                Intent intent = new Intent(tableViewer.this, tablePopUp.class);
+                intent.putExtra("Table Number", Integer.toString(sentTable.table_id));
+                intent.putExtra("Table Avaliable", Boolean.toString(sentTable.avaliable));
+                startActivity(intent);
+            }
+        });
+
+        t5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sentTable = tableArray[4];
                 Intent intent = new Intent(tableViewer.this, tablePopUp.class);
                 intent.putExtra("Table Number", Integer.toString(sentTable.table_id));
                 intent.putExtra("Table Avaliable", Boolean.toString(sentTable.avaliable));

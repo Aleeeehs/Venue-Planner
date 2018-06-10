@@ -32,6 +32,11 @@
 
         </activity>
         <activity
+            android:name=".menuPopUp"
+            android:theme="@style/AppTheme.popUpTheme">
+
+        </activity>
+        <activity
             android:name=".addStaffMenu"
             android:screenOrientation="landscape" >
         </activity>
