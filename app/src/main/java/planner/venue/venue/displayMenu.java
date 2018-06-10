@@ -14,7 +14,7 @@ import java.io.InputStream;
 
 import java.util.ArrayList;
 
-
+//Designed by Matthew Ball
 public class displayMenu extends AppCompatActivity {
 
     final int menu_size = 7;
