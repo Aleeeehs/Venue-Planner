@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class displayMenu extends AppCompatActivity {
     double totalPrice;
     displayMenuController m1;
 
-    Button mainMenuButton, restartOrderButton, payCashButton, tableView;
+    Button mainMenuButton, restartOrderButton, payCashButton, tableView, reservationsView, adminView;
     Button chickenBurgerButton, Soft_Drink, Beef_Burger,Steak, Chicken_Nuggets, Fish_and_Chips, Fries, taxiButton;
     TextView totalTrollyPrice;
     private SharedPreferences nPreferences;
@@ -47,6 +48,8 @@ public class displayMenu extends AppCompatActivity {
         payCashButton = (Button)findViewById(R.id.PayCashButton);
         taxiButton = (Button)findViewById(R.id.taxiButton);
         tableView = (Button)findViewById(R.id.viewTables);
+        reservationsView = findViewById(R.id.reservationsButton);
+        adminView = findViewById(R.id.adminMenuButton);
 
 
         chickenBurgerButton = (Button)findViewById(R.id.chickenBurgerButton);
@@ -68,6 +71,14 @@ public class displayMenu extends AppCompatActivity {
             }
         });
 
+        adminView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(displayMenu.this, administrationMenu.class);
+                startActivity(intent);
+            }
+        });
+
         taxiButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -82,10 +93,12 @@ public class displayMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
+        reservationsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(displayMenu.this, "Not available yet", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Soft_Drink.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -117,8 +130,6 @@ public class displayMenu extends AppCompatActivity {
                 m1.itemButtonPress(1);
                 trollyList.notifyDataSetChanged();
                 totalTrollyPrice.setText("$" + String.valueOf(m1.setPrice()) +"0");
-
-
             }
         });
 

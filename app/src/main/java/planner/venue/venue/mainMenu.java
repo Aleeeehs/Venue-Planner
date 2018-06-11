@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class mainMenu extends AppCompatActivity {
 
-    Button tableView, menuView, adminView, personalView, taxiButton;
+    Button tableView, menuView, adminView, personalView, taxiButton, reservationsView;
 
     TextView t1;
 
@@ -24,6 +25,7 @@ public class mainMenu extends AppCompatActivity {
         menuView = (Button)findViewById(R.id.menuButton);
         personalView = (Button)findViewById(R.id.personalButton);
         taxiButton = (Button)findViewById(R.id.taxiButton);
+        reservationsView = findViewById(R.id.reservationsButton);
 
         tableView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +64,13 @@ public class mainMenu extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(mainMenu.this, callTaxiMenu.class);
                 startActivity(intent);
+            }
+        });
+
+        reservationsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mainMenu.this, "Not available yet", Toast.LENGTH_SHORT).show();
             }
         });
     }

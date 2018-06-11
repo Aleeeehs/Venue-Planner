@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mainMenu"
     tools:layout_editor_absoluteY="89dp">
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="182dp"
-        android:layout_height="467dp"
+        android:layout_height="461dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,31 +22,43 @@
             android:id="@+id/adminMenuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Admin" />
+            android:text="Admin"
+            tools:layout_editor_absoluteX="405dp"
+            tools:layout_editor_absoluteY="174dp" />
 
         <Button
             android:id="@+id/menuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu" />
+            android:background="@android:color/holo_blue_dark"
+            android:text="Menu"
+            tools:layout_editor_absoluteX="418dp"
+            tools:layout_editor_absoluteY="290dp" />
 
         <Button
             android:id="@+id/viewTables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Tables" />
+            android:text="View Tables"
+            tools:layout_editor_absoluteX="542dp"
+            tools:layout_editor_absoluteY="339dp" />
 
         <Button
             android:id="@+id/reservationsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reservations" />
+            android:text="Reservations"
+            tools:layout_editor_absoluteX="451dp"
+            tools:layout_editor_absoluteY="115dp" />
 
         <Button
             android:id="@+id/taxiButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Taxi" />
+            android:text="Taxi"
+            tools:layout_editor_absoluteX="542dp"
+            tools:layout_editor_absoluteY="276dp" />
+
 
         <Space
             android:layout_width="match_parent"
@@ -55,13 +68,17 @@
             android:id="@+id/personalButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Personal" />
+            android:text="Personal"
+            tools:layout_editor_absoluteX="579dp"
+            tools:layout_editor_absoluteY="159dp" />
 
         <Button
             android:id="@+id/endButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="End" />
+            android:text="End"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="35dp" />
     </LinearLayout>
 
 
@@ -69,167 +86,190 @@
         android:id="@+id/BurgersTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="238dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
         android:text="Burgers"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="235dp" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/chickenBurgerButton"
-        android:layout_width="86dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fitsSystemWindows="false"
         android:text="Chicken Burger"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/BurgersTag" />
 
     <Button
         android:id="@+id/PayCashButton"
-        android:layout_width="183dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="Pay Cash"
-        tools:layout_editor_absoluteX="858dp"
-        tools:layout_editor_absoluteY="363dp" />
-
-    <ListView
-        android:id="@+id/ItemsInTrolly"
-        android:layout_width="183dp"
-        android:layout_height="338dp"
-        android:layout_above="@+id/totalTrollyPrice"
-        android:layout_alignParentEnd="true"
-        android:background="@android:color/darker_gray"
-        tools:layout_editor_absoluteX="762dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/totalTrollyPrice"
+        app:layout_constraintTop_toBottomOf="@+id/ItemsInTrolly"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/totalTrollyPrice"
-        android:layout_width="183dp"
+        android:layout_width="wrap_content"
 
-        android:layout_height="22dp"
+        android:layout_height="wrap_content"
 
-        android:layout_above="@+id/PayCashButton"
-        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@android:color/darker_gray"
         android:gravity="right"
         android:text="$00.00"
-        tools:layout_editor_absoluteX="874dp"
-        tools:layout_editor_absoluteY="342dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="$00.00" />
 
     <Button
         android:id="@+id/BeefBurgerButton"
-        android:layout_width="84dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/chickenBurgerButton"
-        android:layout_marginTop="136dp"
-        android:text="BEEF BURGER" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="BEEF BURGER"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/chickenBurgerButton" />
 
     <TextView
         android:id="@+id/DrinksTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/BurgersTag"
-        android:layout_marginBottom="137dp"
-        android:text="Drinks" />
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:text="Drinks"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/FishChipsButton" />
 
     <Button
         android:id="@+id/SoftDrinkButton"
-        android:layout_width="84dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/PayCashButton"
-        android:layout_alignStart="@+id/chickenBurgerButton"
-        android:text="Soft Drink" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:text="Soft Drink"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/DrinksTag" />
 
     <TextView
         android:id="@+id/MeatText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/BurgersTag"
-        android:layout_marginStart="393dp"
-        android:text="The Meat" />
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginTop="16dp"
+        android:text="The Meat"
+        app:layout_constraintEnd_toStartOf="@+id/RestartOrderButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SteakButton"
-        android:layout_width="86dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/chickenBurgerButton"
-        android:layout_marginStart="380dp"
-        android:text="Steak" />
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Steak"
+        app:layout_constraintStart_toEndOf="@+id/chickenBurgerButton"
+        app:layout_constraintTop_toBottomOf="@+id/MeatText" />
 
     <Button
         android:id="@+id/ChickenNuggetsButton"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/SteakButton"
-        android:layout_alignTop="@+id/BeefBurgerButton"
-        android:text="Chicken Nuggets" />
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Chicken Nuggets"
+        app:layout_constraintStart_toEndOf="@+id/BeefBurgerButton"
+        app:layout_constraintTop_toBottomOf="@+id/SteakButton" />
 
     <Button
         android:id="@+id/FishChipsButton"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/SteakButton"
-        android:layout_marginBottom="192dp"
-        android:text="Fish and Chips" />
+        android:layout_marginLeft="168dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="36dp"
+        android:text="Fish and Chips"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/ChickenNuggetsButton" />
 
     <TextView
         android:id="@+id/SidesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/BurgersTag"
-        android:layout_marginEnd="333dp"
-        android:text="Sides" />
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:layout_marginTop="16dp"
+        android:text="Sides"
+        app:layout_constraintEnd_toStartOf="@+id/ItemsInTrolly"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/friesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/chickenBurgerButton"
-        android:layout_marginEnd="309dp"
-        android:text="Fries" />
-
-    <Button
-        android:id="@+id/RestartOrderButton"
-        android:layout_width="113dp"
-        android:layout_height="36dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/holo_red_dark"
-        android:text="Restart Order" />
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="8dp"
+        android:text="Fries"
+        app:layout_constraintEnd_toStartOf="@+id/RestartOrderButton"
+        app:layout_constraintTop_toBottomOf="@+id/SidesText" />
 
     <TextView
         android:id="@+id/fishoftheday"
-        android:layout_width="196dp"
-        android:layout_height="34dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/PayCashButton"
-        android:layout_marginStart="360dp"
-        android:text="Fish of the Day: Snapper" />
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:text="Fish of the Day: Snapper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SoftDrinkButton" />
 
     <TextView
         android:id="@+id/hinttext"
-        android:layout_width="237dp"
-        android:layout_height="31dp"
-        android:layout_alignStart="@+id/fishoftheday"
-        android:layout_alignTop="@+id/SoftDrinkButton"
-        android:text="Hold down a button for info" />
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:text="Hold down a button for info"
+        app:layout_constraintBottom_toTopOf="@+id/fishoftheday"
+        app:layout_constraintStart_toEndOf="@+id/SoftDrinkButton" />
+
+    <ListView
+        android:id="@+id/ItemsInTrolly"
+        android:layout_width="221dp"
+        android:layout_height="383dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RestartOrderButton" />
+
+    <Button
+        android:id="@+id/RestartOrderButton"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Restart Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

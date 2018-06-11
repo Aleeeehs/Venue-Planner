@@ -44,7 +44,7 @@
             android:text="Menu" />
 
         <Button
-            android:id="@+id/viewTables"
+            android:id="@+id/viewTablesButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Tables" />
@@ -121,17 +121,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/text_view_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="168dp"
-        android:layout_marginStart="168dp"
-        android:text="00:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
-
     <Button
         android:id="@+id/button_start_timer"
         style="@style/Widget.AppCompat.Button.Borderless"
@@ -163,8 +152,8 @@
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="44dp"
         android:layout_marginLeft="104dp"
         android:layout_marginStart="104dp"
         android:textSize="18sp"

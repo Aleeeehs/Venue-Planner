@@ -7,9 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class callTaxiMenu extends AppCompatActivity {
-    Button tableView, menuView, adminView, personalView, callbutton;
+    Button tableView, menuView, adminView, personalView, callbutton, reservationsView, mainMenuView;
 
     TextView t1;
 
@@ -24,6 +25,8 @@ public class callTaxiMenu extends AppCompatActivity {
         menuView = (Button)findViewById(R.id.menuButton);
         personalView = (Button)findViewById(R.id.personalButton);
         callbutton= (Button)findViewById(R.id.callbutton);
+        reservationsView = (Button) findViewById(R.id.reservationsButton);
+        mainMenuView = findViewById(R.id.endButton);
 
         tableView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +44,14 @@ public class callTaxiMenu extends AppCompatActivity {
             }
         });
 
+        mainMenuView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(callTaxiMenu.this, mainMenu.class);
+                startActivity(intent);
+            }
+        });
+
         menuView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -54,6 +65,12 @@ public class callTaxiMenu extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(callTaxiMenu.this, personalizationMenu.class);
                 startActivity(intent);
+            }
+        });
+        reservationsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(callTaxiMenu.this, "Not available yet", Toast.LENGTH_SHORT).show();
             }
         });
 
